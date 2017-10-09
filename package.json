@@ -1,0 +1,17 @@
+{
+  "name": "flydawnmantest",
+  "version": "1.0.0",
+  "description": "flydawnman项目测试项目",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "flydawnman",
+    "study"
+  ],
+  "author": "flydawnman",
+  "license": "ISC"
+}
