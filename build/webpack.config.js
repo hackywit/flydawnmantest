@@ -10,7 +10,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 module.exports = {
     entry: './src/index.js',
     output: {
-        filename: '[hash].bundle2.js',
+        filename: 'bundle.js',
         path: path.resolve(__dirname, '../dist'),
     },
     devServer: {
@@ -18,7 +18,8 @@ module.exports = {
     },
     module: {
         rules: [
-            { test: /\.js$/, use: 'babel-loader' }
+            {test: /\.js$/, use: 'babel-loader'},
+            {test: /\.vue$/, use: 'vue-loader'}
         ]
     },
     plugins: [
@@ -33,5 +34,10 @@ module.exports = {
             template: 'index.html'
         })
     ],
+    resolve: {
+        alias: {
+            'vue': 'vue/dist/vue.js'
+        }
+    }
 };
 //说到底整个的webpack配置文件是导出为了一个对象
